@@ -14,6 +14,7 @@
 		54C1CF4B25E0F53000142E68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C1CF4925E0F53000142E68 /* LaunchScreen.storyboard */; };
 		54C1CF5625E0F53000142E68 /* HashimGitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1CF5525E0F53000142E68 /* HashimGitTests.swift */; };
 		54C1CF6125E0F53000142E68 /* HashimGitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1CF6025E0F53000142E68 /* HashimGitUITests.swift */; };
+		54C1CF8E25E0FADC00142E68 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54C1CF8D25E0FADC00142E68 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		54C1CF6225E0F53100142E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54C1CF8025E0F99900142E68 /* ml */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ml; path = ml.lproj/Main.strings; sourceTree = "<group>"; };
 		54C1CF8125E0F99900142E68 /* ml */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ml; path = ml.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		54C1CF8D25E0FADC00142E68 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				54C1CF4725E0F53000142E68 /* Assets.xcassets */,
 				54C1CF4925E0F53000142E68 /* LaunchScreen.storyboard */,
 				54C1CF4C25E0F53000142E68 /* Info.plist */,
+				54C1CF8D25E0FADC00142E68 /* Localizable.strings */,
 			);
 			path = HashimGit;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54C1CF4B25E0F53000142E68 /* LaunchScreen.storyboard in Resources */,
+				54C1CF8E25E0FADC00142E68 /* Localizable.strings in Resources */,
 				54C1CF4825E0F53000142E68 /* Assets.xcassets in Resources */,
 				54C1CF4625E0F52F00142E68 /* Main.storyboard in Resources */,
 			);
