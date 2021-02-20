@@ -52,6 +52,9 @@
 		54C1CF8125E0F99900142E68 /* ml */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ml; path = ml.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		54C1CF9325E0FB1A00142E68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		54C1CF9825E0FB3500142E68 /* ml */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ml; path = ml.lproj/Localizable.strings; sourceTree = "<group>"; };
+		54C1CF9D25E1042000142E68 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
+		54C1CF9E25E1042000142E68 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		54C1CF9F25E1042000142E68 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,7 @@
 		54C1CF3D25E0F52F00142E68 /* HashimGit */ = {
 			isa = PBXGroup;
 			children = (
+				54C1CF9925E0FB7600142E68 /* Localizations */,
 				54C1CF3E25E0F52F00142E68 /* AppDelegate.swift */,
 				54C1CF4225E0F52F00142E68 /* ViewController.swift */,
 				54C1CF4425E0F52F00142E68 /* Main.storyboard */,
@@ -129,6 +133,13 @@
 				54C1CF6225E0F53100142E68 /* Info.plist */,
 			);
 			path = HashimGitUITests;
+			sourceTree = "<group>";
+		};
+		54C1CF9925E0FB7600142E68 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localizations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 				en,
 				Base,
 				ml,
+				nl,
 			);
 			mainGroup = 54C1CF3225E0F52E00142E68;
 			productRefGroup = 54C1CF3C25E0F52F00142E68 /* Products */;
@@ -305,6 +317,7 @@
 			children = (
 				54C1CF4525E0F52F00142E68 /* Base */,
 				54C1CF8025E0F99900142E68 /* ml */,
+				54C1CF9D25E1042000142E68 /* nl */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -314,6 +327,7 @@
 			children = (
 				54C1CF4A25E0F53000142E68 /* Base */,
 				54C1CF8125E0F99900142E68 /* ml */,
+				54C1CF9E25E1042000142E68 /* nl */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -323,6 +337,7 @@
 			children = (
 				54C1CF9325E0FB1A00142E68 /* en */,
 				54C1CF9825E0FB3500142E68 /* ml */,
+				54C1CF9F25E1042000142E68 /* nl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
