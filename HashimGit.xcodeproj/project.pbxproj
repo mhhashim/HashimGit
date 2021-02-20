@@ -109,15 +109,13 @@
 		54C1CF3D25E0F52F00142E68 /* HashimGit */ = {
 			isa = PBXGroup;
 			children = (
-				54C1CF9925E0FB7600142E68 /* Localizations */,
+				54C1CFBE25E108D000142E68 /* Localizations */,
 				54C1CF3E25E0F52F00142E68 /* AppDelegate.swift */,
 				54C1CF4225E0F52F00142E68 /* ViewController.swift */,
 				54C1CF4425E0F52F00142E68 /* Main.storyboard */,
 				54C1CF4725E0F53000142E68 /* Assets.xcassets */,
 				54C1CF4925E0F53000142E68 /* LaunchScreen.storyboard */,
 				54C1CF4C25E0F53000142E68 /* Info.plist */,
-				54C1CFB425E1061B00142E68 /* InfoPlist.strings */,
-				54C1CF9425E0FB1A00142E68 /* Localizable.strings */,
 			);
 			path = HashimGit;
 			sourceTree = "<group>";
@@ -140,9 +138,11 @@
 			path = HashimGitUITests;
 			sourceTree = "<group>";
 		};
-		54C1CF9925E0FB7600142E68 /* Localizations */ = {
+		54C1CFBE25E108D000142E68 /* Localizations */ = {
 			isa = PBXGroup;
 			children = (
+				54C1CF9425E0FB1A00142E68 /* Localizable.strings */,
+				54C1CFB425E1061B00142E68 /* InfoPlist.strings */,
 			);
 			path = Localizations;
 			sourceTree = "<group>";
