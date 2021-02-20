@@ -15,6 +15,7 @@
 		54C1CF5625E0F53000142E68 /* HashimGitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1CF5525E0F53000142E68 /* HashimGitTests.swift */; };
 		54C1CF6125E0F53000142E68 /* HashimGitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1CF6025E0F53000142E68 /* HashimGitUITests.swift */; };
 		54C1CF9225E0FB1A00142E68 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54C1CF9425E0FB1A00142E68 /* Localizable.strings */; };
+		54C1CFB225E1061B00142E68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54C1CFB425E1061B00142E68 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,9 @@
 		54C1CF9D25E1042000142E68 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
 		54C1CF9E25E1042000142E68 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		54C1CF9F25E1042000142E68 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		54C1CFB325E1061B00142E68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		54C1CFB825E1061F00142E68 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		54C1CFB925E1062000142E68 /* ml */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ml; path = ml.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 				54C1CF4725E0F53000142E68 /* Assets.xcassets */,
 				54C1CF4925E0F53000142E68 /* LaunchScreen.storyboard */,
 				54C1CF4C25E0F53000142E68 /* Info.plist */,
+				54C1CFB425E1061B00142E68 /* InfoPlist.strings */,
 				54C1CF9425E0FB1A00142E68 /* Localizable.strings */,
 			);
 			path = HashimGit;
@@ -251,6 +256,7 @@
 				54C1CF9225E0FB1A00142E68 /* Localizable.strings in Resources */,
 				54C1CF4825E0F53000142E68 /* Assets.xcassets in Resources */,
 				54C1CF4625E0F52F00142E68 /* Main.storyboard in Resources */,
+				54C1CFB225E1061B00142E68 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +346,16 @@
 				54C1CF9F25E1042000142E68 /* nl */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		54C1CFB425E1061B00142E68 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54C1CFB325E1061B00142E68 /* en */,
+				54C1CFB825E1061F00142E68 /* nl */,
+				54C1CFB925E1062000142E68 /* ml */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
