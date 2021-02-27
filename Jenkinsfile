@@ -23,6 +23,7 @@ pipeline {
     }
         parameters {
         booleanParam(name: 'RemoveWorkspace', defaultValue: false, description: 'Remove Workspace')
+        booleanParam(name: 'isLogEnabled', defaultValue: false, description: 'Enable Log')
         choice(choices: 'Auto\nRelease\nDebug', description: 'What type of build to BranchNamebuild?', name: 'buildType')
     }
     triggers {
@@ -147,7 +148,17 @@ def getBuildFlavor() {
 
 def build() {
     echo "----- build start -----"
-    xcodebuild
+        def isLogEnabled = true
+    def verboseMode = "-quiet"
+    if (isLogEnabled) {
+        verboseMode = ""
+    }
+    echo $verboseMode
+    def shellcommand = '''#!/bin/bash -l
+    xcodebuild | xcpretty -t; test ${PIPESTATUS[0]} -eq 0
+    '''
+    sh shellcommand
+    
     echo "----- build end -----"
 }
 
