@@ -148,14 +148,13 @@ def getBuildFlavor() {
 
 def build() {
     echo "----- build start -----"
-        def isLogEnabled = true
-    def verboseMode = "-quiet"
+    verboseMode = "-quiet"
     if (isLogEnabled) {
         verboseMode = ""
     }
-    echo $verboseMode
+    echo verboseMode
     def shellcommand = '''#!/bin/bash -l
-    xcodebuild | xcpretty -t; test ${PIPESTATUS[0]} -eq 0
+    xcodebuild $verboseMode | xcpretty -t; test ${PIPESTATUS[0]} -eq 0
     '''
     sh shellcommand
     

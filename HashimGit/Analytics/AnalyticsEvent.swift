@@ -36,7 +36,6 @@ class AnalyticsEvent {
 
         func build() -> AnalyticsEvent {
             event
-            kkk
         }
 
         func send() {
