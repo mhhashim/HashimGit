@@ -115,11 +115,12 @@ def updateBuildInfo() {
     committerName = sh (script: "git show -s --format='%an' HEAD", returnStdout: true).trim()
     currentBuild.description = "Submitter: " + committerName + ";Node: ${env.NODE_NAME}"
     echo currentBuild.description
-
-    if (params.buildType == 'AUTO') {
-             currentBuild.displayName = "${env.BUILD_NUMBER}-${BUILDTYPE}-AUTO"
+    BUILD_TRIGGER_BY = "${currentBuild.getBuildCauses()[0].shortDescription} / ${currentBuild.getBuildCauses()[0].userId}"
+    echo "BUILD_TRIGGER_BY: ${BUILD_TRIGGER_BY}"    
+    if (params.buildType == 'Auto') {
+             currentBuild.displayName = "${env.BUILD_NUMBER}-${BUILDTYPE}-Auto-${BUILD_TRIGGER_BY}"
     } else {
-         currentBuild.displayName = "${env.BUILD_NUMBER}-${BUILDTYPE}"
+         currentBuild.displayName = "${env.BUILD_NUMBER}-${BUILDTYPE}-${BUILD_TRIGGER_BY}"
     }
     echo currentBuild.displayName
 }
