@@ -31,7 +31,7 @@ pipeline {
     environment {
         TRIGGER_BY_TIMER          = 'false'
         BUILDDATE                 = sh(script: 'echo `date "+%d%m%Y_%H%M%S"`', returnStdout: true).trim()
-        APPBASENAME               = "Babyplus"
+        APPBASENAME               = "HashimGit"
         BUILD_NUMBER              = "${BuildNo}"
         BRANCHNAME                = "${BranchName}"
         BRANCH                    = "${BranchName}".replace('/', '-')
@@ -47,7 +47,7 @@ pipeline {
         ARTIFACTORY_REPO          = ""
         DSYM_PATH                 = "AppStore.xcarchive/dSYMs"
         DSYM_PATH_adhoc           = "Adhoc.xcarchive/dSYMs"
-        BUILD_FLAVOR              = getBuildFlavor()
+        BUILD_FLAVOR              = getBuildType()
     }
     options {
         timestamps()
@@ -59,7 +59,7 @@ pipeline {
         stage('Initialize') {
               steps {
                   updateBuildInfo()
-                  updatePods(LogLevel)
+                  updatePods(logLevel)
               }
           }
 
@@ -71,8 +71,6 @@ pipeline {
             }
         }
 
-        
-         
         
         stage('Publish') {
             steps {
@@ -90,7 +88,7 @@ pipeline {
 
 }
 
-def updateAutoConfig() {
+def getBuildType() {
 
     if (env.BUILDTYPE != "Auto") {
         return env.BUILDTYPE
@@ -112,7 +110,7 @@ def updateAutoConfig() {
 
 
 def updateBuildInfo() {
-    BUILDTYPE = updateAutoConfig()
+    BUILDTYPE = getBuildType()
     committerName = sh (script: "git show -s --format='%an' HEAD", returnStdout: true).trim()
     currentBuild.description = "Submitter: " + committerName + ";Node: ${env.NODE_NAME}"
     echo currentBuild.description
@@ -148,7 +146,9 @@ def getBuildFlavor() {
 
 
 def build() {
-    echo "publish ipa"
+    echo "----- build start -----"
+    xcodebuild
+    echo "----- build end -----"
 }
 
 def publish() {
