@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5456C2D925EA25350082FD69 /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5456C2D825EA25350082FD69 /* AnalyticsEvent.swift */; };
+		5456C2DF25EA256B0082FD69 /* DynamicMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5456C2DE25EA256B0082FD69 /* DynamicMember.swift */; };
 		54C1CF3F25E0F52F00142E68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1CF3E25E0F52F00142E68 /* AppDelegate.swift */; };
 		54C1CF4325E0F52F00142E68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1CF4225E0F52F00142E68 /* ViewController.swift */; };
 		54C1CF4625E0F52F00142E68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C1CF4425E0F52F00142E68 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5456C2D825EA25350082FD69 /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
+		5456C2DE25EA256B0082FD69 /* DynamicMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicMember.swift; sourceTree = "<group>"; };
 		54C1CF3B25E0F52F00142E68 /* HashimGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HashimGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C1CF3E25E0F52F00142E68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54C1CF4225E0F52F00142E68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5456C2D725EA25170082FD69 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				5456C2D825EA25350082FD69 /* AnalyticsEvent.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		5456C2DD25EA25550082FD69 /* SwiftAdvanced */ = {
+			isa = PBXGroup;
+			children = (
+				5456C2DE25EA256B0082FD69 /* DynamicMember.swift */,
+			);
+			path = SwiftAdvanced;
+			sourceTree = "<group>";
+		};
 		54C1CF3225E0F52E00142E68 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +129,8 @@
 		54C1CF3D25E0F52F00142E68 /* HashimGit */ = {
 			isa = PBXGroup;
 			children = (
+				5456C2DD25EA25550082FD69 /* SwiftAdvanced */,
+				5456C2D725EA25170082FD69 /* Analytics */,
 				54C1CFBE25E108D000142E68 /* Localizations */,
 				54C1CF3E25E0F52F00142E68 /* AppDelegate.swift */,
 				54C1CF4225E0F52F00142E68 /* ViewController.swift */,
@@ -281,8 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5456C2D925EA25350082FD69 /* AnalyticsEvent.swift in Sources */,
 				54C1CF4325E0F52F00142E68 /* ViewController.swift in Sources */,
 				54C1CF3F25E0F52F00142E68 /* AppDelegate.swift in Sources */,
+				5456C2DF25EA256B0082FD69 /* DynamicMember.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
