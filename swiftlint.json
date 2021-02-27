@@ -1,0 +1,137 @@
+[
+  {
+    "character" : null,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/ViewController.swift",
+    "line" : 24,
+    "reason" : "Files should have a single trailing newline.",
+    "rule_id" : "trailing_newline",
+    "severity" : "Warning",
+    "type" : "Trailing Newline"
+  },
+  {
+    "character" : 9,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/SwiftAdvanced\/DynamicMember.swift",
+    "line" : 11,
+    "reason" : "Colons should be next to the identifier when specifying a type and next to the key in dictionary literals.",
+    "rule_id" : "colon",
+    "severity" : "Warning",
+    "type" : "Colon"
+  },
+  {
+    "character" : 13,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/SwiftAdvanced\/DynamicMember.swift",
+    "line" : 10,
+    "reason" : "Opening braces should be preceded by a single space and on the same line as the declaration.",
+    "rule_id" : "opening_brace",
+    "severity" : "Warning",
+    "type" : "Opening Brace Spacing"
+  },
+  {
+    "character" : 16,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/SwiftAdvanced\/DynamicMember.swift",
+    "line" : 13,
+    "reason" : "Opening braces should be preceded by a single space and on the same line as the declaration.",
+    "rule_id" : "opening_brace",
+    "severity" : "Warning",
+    "type" : "Opening Brace Spacing"
+  },
+  {
+    "character" : 17,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/Analytics\/AnalyticsEvent.swift",
+    "line" : 11,
+    "reason" : "Colons should be next to the identifier when specifying a type and next to the key in dictionary literals.",
+    "rule_id" : "colon",
+    "severity" : "Warning",
+    "type" : "Colon"
+  },
+  {
+    "character" : 17,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/Analytics\/AnalyticsEvent.swift",
+    "line" : 12,
+    "reason" : "Colons should be next to the identifier when specifying a type and next to the key in dictionary literals.",
+    "rule_id" : "colon",
+    "severity" : "Warning",
+    "type" : "Colon"
+  },
+  {
+    "character" : 17,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/Analytics\/AnalyticsEvent.swift",
+    "line" : 13,
+    "reason" : "Colons should be next to the identifier when specifying a type and next to the key in dictionary literals.",
+    "rule_id" : "colon",
+    "severity" : "Warning",
+    "type" : "Colon"
+  },
+  {
+    "character" : 17,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/Analytics\/AnalyticsEvent.swift",
+    "line" : 14,
+    "reason" : "Colons should be next to the identifier when specifying a type and next to the key in dictionary literals.",
+    "rule_id" : "colon",
+    "severity" : "Warning",
+    "type" : "Colon"
+  },
+  {
+    "character" : 34,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/Analytics\/AnalyticsEvent.swift",
+    "line" : 52,
+    "reason" : "Colons should be next to the identifier when specifying a type and next to the key in dictionary literals.",
+    "rule_id" : "colon",
+    "severity" : "Warning",
+    "type" : "Colon"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/Analytics\/AnalyticsEvent.swift",
+    "line" : 58,
+    "reason" : "Files should have a single trailing newline.",
+    "rule_id" : "trailing_newline",
+    "severity" : "Warning",
+    "type" : "Trailing Newline"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGitUITests\/HashimGitUITests.swift",
+    "line" : 18,
+    "reason" : "Line should be 120 characters or less: currently 182 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/AppDelegate.swift",
+    "line" : 14,
+    "reason" : "Line should be 120 characters or less: currently 145 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/AppDelegate.swift",
+    "line" : 21,
+    "reason" : "Files should have a single trailing newline.",
+    "rule_id" : "trailing_newline",
+    "severity" : "Warning",
+    "type" : "Trailing Newline"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/AppDelegate.swift",
+    "line" : 19,
+    "reason" : "Limit vertical whitespace to a single empty line. Currently 2.",
+    "rule_id" : "vertical_whitespace",
+    "severity" : "Warning",
+    "type" : "Vertical Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/hashim\/Documents\/Projects\/Baby\/TestProjects\/HashimGit\/HashimGit\/SwiftLintIssues\/CommonLintIssues.swift",
+    "line" : 12,
+    "reason" : "Line should be 120 characters or less: currently 152 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  }
+]
