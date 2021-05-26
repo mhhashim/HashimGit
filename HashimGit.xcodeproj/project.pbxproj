@@ -10,6 +10,7 @@
 		5456C2D925EA25350082FD69 /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5456C2D825EA25350082FD69 /* AnalyticsEvent.swift */; };
 		5456C2DF25EA256B0082FD69 /* DynamicMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5456C2DE25EA256B0082FD69 /* DynamicMember.swift */; };
 		5456C2E825EAB5EA0082FD69 /* CommonLintIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5456C2E725EAB5EA0082FD69 /* CommonLintIssues.swift */; };
+		547087E0265E9EA1002164B6 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547087DF265E9EA1002164B6 /* HttpClient.swift */; };
 		54C1CF3F25E0F52F00142E68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1CF3E25E0F52F00142E68 /* AppDelegate.swift */; };
 		54C1CF4325E0F52F00142E68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1CF4225E0F52F00142E68 /* ViewController.swift */; };
 		54C1CF4625E0F52F00142E68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C1CF4425E0F52F00142E68 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 		5456C2D825EA25350082FD69 /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 		5456C2DE25EA256B0082FD69 /* DynamicMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicMember.swift; sourceTree = "<group>"; };
 		5456C2E725EAB5EA0082FD69 /* CommonLintIssues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLintIssues.swift; sourceTree = "<group>"; };
+		547087DF265E9EA1002164B6 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		547087F7265EA353002164B6 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
 		54C1CF3B25E0F52F00142E68 /* HashimGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HashimGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C1CF3E25E0F52F00142E68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54C1CF4225E0F52F00142E68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,9 +119,26 @@
 			path = SwiftLintIssues;
 			sourceTree = "<group>";
 		};
+		547087DE265E9E7F002164B6 /* CodeCoverage */ = {
+			isa = PBXGroup;
+			children = (
+				547087DF265E9EA1002164B6 /* HttpClient.swift */,
+			);
+			path = CodeCoverage;
+			sourceTree = "<group>";
+		};
+		547087F6265EA2D8002164B6 /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				547087F7265EA353002164B6 /* .github */,
+			);
+			name = Github;
+			sourceTree = "<group>";
+		};
 		54C1CF3225E0F52E00142E68 = {
 			isa = PBXGroup;
 			children = (
+				547087F6265EA2D8002164B6 /* Github */,
 				54C1CF3D25E0F52F00142E68 /* HashimGit */,
 				54C1CF5425E0F53000142E68 /* HashimGitTests */,
 				54C1CF5F25E0F53000142E68 /* HashimGitUITests */,
@@ -139,6 +159,7 @@
 		54C1CF3D25E0F52F00142E68 /* HashimGit */ = {
 			isa = PBXGroup;
 			children = (
+				547087DE265E9E7F002164B6 /* CodeCoverage */,
 				5456C2E625EAB5D20082FD69 /* SwiftLintIssues */,
 				5456C2DD25EA25550082FD69 /* SwiftAdvanced */,
 				5456C2D725EA25170082FD69 /* Analytics */,
@@ -318,6 +339,7 @@
 				5456C2E825EAB5EA0082FD69 /* CommonLintIssues.swift in Sources */,
 				54C1CF4325E0F52F00142E68 /* ViewController.swift in Sources */,
 				54C1CF3F25E0F52F00142E68 /* AppDelegate.swift in Sources */,
+				547087E0265E9EA1002164B6 /* HttpClient.swift in Sources */,
 				5456C2DF25EA256B0082FD69 /* DynamicMember.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
