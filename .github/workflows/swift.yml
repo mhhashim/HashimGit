@@ -24,6 +24,6 @@ jobs:
       uses: codecov/codecov-action@v1.2.1
 
     - name: GitHub Action for SwiftLint (Only files changed in the PR)
-      uses: norio-nomura/action-swiftlint@3.2.1
+      uses: mhhashim/action-swiftlint
       env:
         DIFF_BASE: ${{ github.base_ref }}
