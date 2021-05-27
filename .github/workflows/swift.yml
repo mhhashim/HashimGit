@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Fetch base ref
+      run: git fetch --no-tags --prune --depth=1 origin ${{ github.base_ref }}
     - name: SwiftLint (Only files changed in the PR)
       uses: norio-nomura/action-swiftlint@3.2.1
       env:
