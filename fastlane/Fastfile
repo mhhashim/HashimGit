@@ -36,7 +36,7 @@ platform :ios do
       code_coverage: true, 
       derived_data_path: "./DerivedData", 
       output_directory: "./sonar-reports",
-      devices: "iPhone 6s")
+      devices: "iPhone 11 Pro Max")
      
     slather(cobertura_xml: true, 
       jenkins: true, 
@@ -50,4 +50,9 @@ platform :ios do
 
      sonar
 end
+ lane :lint do
+ swiftlint(output_file: "./sonar-reports/swiftlint.txt",
+      ignore_exit_status: true)
+end
+
 end

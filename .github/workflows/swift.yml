@@ -7,6 +7,15 @@ on:
     branches: [ develop ]
 
 jobs:
+
+  swiftlint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: SwiftLint (Only files changed in the PR)
+      uses: norio-nomura/action-swiftlint@3.2.1
+      env:
+        DIFF_BASE: ${{ github.base_ref }}
+
   build:
 
     runs-on: macos-latest
@@ -23,7 +32,3 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1.2.1
 
-    - name: GitHub Action for SwiftLint (Only files changed in the PR)
-      uses: mhhashim/action-swiftlint@master
-      env:
-        DIFF_BASE: ${{ github.base_ref }}
