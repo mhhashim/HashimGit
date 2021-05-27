@@ -14,7 +14,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: SwiftLint (Only files changed in the PR)
       uses: norio-nomura/action-swiftlint@3.2.1
-
+      env:
+        DIFF_BASE: ${{ github.base_ref }}
+        WORKING_DIRECTORY: HashimGit
 
   build:
 
