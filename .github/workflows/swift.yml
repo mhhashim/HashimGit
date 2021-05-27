@@ -16,9 +16,11 @@ jobs:
       run: git fetch --no-tags --prune --depth=1 origin ${{ github.base_ref }}
     - name: SwiftLint (Only files changed in the PR)
       uses: norio-nomura/action-swiftlint@3.2.1
+      with:
+        args: --force-exclude
       env:
         DIFF_BASE: origin/${{ github.base_ref }}
-        WORKING_DIRECTORY: HashimGit
+
 
   build:
 
