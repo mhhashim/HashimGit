@@ -2,11 +2,28 @@ name: Swift
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master , github, jenkins]
   pull_request:
-    branches: [ master ]
+    branches: [ develop ]
 
 jobs:
+
+  swiftlint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+       ref: ${{ github.event.pull_request.head.sha }}
+    - name: Fetch base ref
+      run: git fetch --no-tags --prune --depth=1 origin ${{ github.base_ref }}
+    - name: SwiftLint (Only files changed in the PR)
+      uses: norio-nomura/action-swiftlint@3.2.1
+      with:
+        args: --force-exclude
+      env:
+        DIFF_BASE: origin/${{ github.base_ref }}
+
+
   build:
 
     runs-on: macos-latest
@@ -19,3 +36,7 @@ jobs:
       
     - name: Build and test
       run: xcodebuild clean build test -project HashimGit.xcodeproj -scheme "HashimGit" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1.2.1
+

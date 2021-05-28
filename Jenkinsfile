@@ -23,6 +23,7 @@ pipeline {
     }
         parameters {
         booleanParam(name: 'RemoveWorkspace', defaultValue: false, description: 'Remove Workspace')
+        booleanParam(name: 'isLogEnabled', defaultValue: false, description: 'Enable Log')
         choice(choices: 'Auto\nRelease\nDebug', description: 'What type of build to BranchNamebuild?', name: 'buildType')
     }
     triggers {
@@ -31,7 +32,7 @@ pipeline {
     environment {
         TRIGGER_BY_TIMER          = 'false'
         BUILDDATE                 = sh(script: 'echo `date "+%d%m%Y_%H%M%S"`', returnStdout: true).trim()
-        APPBASENAME               = "Babyplus"
+        APPBASENAME               = "HashimGit"
         BUILD_NUMBER              = "${BuildNo}"
         BRANCHNAME                = "${BranchName}"
         BRANCH                    = "${BranchName}".replace('/', '-')
@@ -47,7 +48,7 @@ pipeline {
         ARTIFACTORY_REPO          = ""
         DSYM_PATH                 = "AppStore.xcarchive/dSYMs"
         DSYM_PATH_adhoc           = "Adhoc.xcarchive/dSYMs"
-        BUILD_FLAVOR              = getBuildFlavor()
+        BUILD_FLAVOR              = getBuildType()
     }
     options {
         timestamps()
@@ -59,7 +60,7 @@ pipeline {
         stage('Initialize') {
               steps {
                   updateBuildInfo()
-                  updatePods(LogLevel)
+                  updatePods(logLevel)
               }
           }
 
@@ -71,8 +72,6 @@ pipeline {
             }
         }
 
-        
-         
         
         stage('Publish') {
             steps {
@@ -90,7 +89,7 @@ pipeline {
 
 }
 
-def updateAutoConfig() {
+def getBuildType() {
 
     if (env.BUILDTYPE != "Auto") {
         return env.BUILDTYPE
@@ -112,15 +111,16 @@ def updateAutoConfig() {
 
 
 def updateBuildInfo() {
-    BUILDTYPE = updateAutoConfig()
+    BUILDTYPE = getBuildType()
     committerName = sh (script: "git show -s --format='%an' HEAD", returnStdout: true).trim()
     currentBuild.description = "Submitter: " + committerName + ";Node: ${env.NODE_NAME}"
     echo currentBuild.description
-
-    if (params.buildType == 'AUTO') {
-             currentBuild.displayName = "${env.BUILD_NUMBER}-${BUILDTYPE}-AUTO"
+    BUILD_TRIGGER_BY = "${currentBuild.getBuildCauses()[0].shortDescription} / ${currentBuild.getBuildCauses()[0].userId}"
+    echo "BUILD_TRIGGER_BY: ${BUILD_TRIGGER_BY}"    
+    if (params.buildType == 'Auto') {
+             currentBuild.displayName = "${env.BUILD_NUMBER}-${BUILDTYPE}-Auto-${BUILD_TRIGGER_BY}"
     } else {
-         currentBuild.displayName = "${env.BUILD_NUMBER}-${BUILDTYPE}"
+         currentBuild.displayName = "${env.BUILD_NUMBER}-${BUILDTYPE}-${BUILD_TRIGGER_BY}"
     }
     echo currentBuild.displayName
 }
@@ -148,7 +148,18 @@ def getBuildFlavor() {
 
 
 def build() {
-    echo "publish ipa"
+    echo "----- build start -----"
+    verboseMode = "-quiet"
+    if (isLogEnabled) {
+        verboseMode = ""
+    }
+    echo verboseMode
+    def shellcommand = '''#!/bin/bash -l
+    xcodebuild $verboseMode | xcpretty -t; test ${PIPESTATUS[0]} -eq 0
+    '''
+    sh shellcommand
+    
+    echo "----- build end -----"
 }
 
 def publish() {
