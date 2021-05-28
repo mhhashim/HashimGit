@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
     - name: Fetch base ref
       run: git fetch --no-tags --prune --depth=1 origin ${{ github.base_ref }}
     - name: SwiftLint (Only files changed in the PR)
